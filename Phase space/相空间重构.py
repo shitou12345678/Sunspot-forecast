@@ -24,7 +24,7 @@ def PhaSpaRecon(df,tau,d,T):
         Yn = pd.DataFrame(Yn)
         Yn_date = pd.DataFrame(Yn_date)
         Y = pd.concat([Yn_date, Yn],axis=1)
-        Xn = Xn1.reshape((Xn1.shape[1], Xn1.shape[0]))
+        Xn = Xn1.T #reshape((Xn1.shape[1], Xn1.shape[0]))
         Xn = pd.DataFrame(Xn)
         X = pd.concat([Xn, Yn],axis=1)
     return Xn, Yn, Y, X
